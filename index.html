@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alquilá acá tu cancha y jugá tu deporte favorito, futbol, tenis, basquet y mucho más en Rosario y alrededores. Desafía facilmente a otros oponentes con un solo click. Con StadiumRosario.com, hacer deportes y divertirse nunca fue más facil.">
-    <meta name="keywords" content="ESTADIOS, STADIUM, ALQUILER, CANCHAS, COMPLEJOS, DEPORTES, FUTBOL, BASQUET, TENIS, ROSARIO, FUNES, VILLA, GOBERNADOR, GALVEZ, ROLDAN, GRANADER, BAIGORRIA, DESAFÍOS, PARTIDOS, FUTBOL 5, FUTBOL 7, FUTBOL 11">
+    <meta name="keywords" content="ESTADIOS, STADIUM, ALQUILER, CANCHAS, COMPLEJOS, DEPORTES, FUTBOL, BASQUET, TENIS, ROSARIO, FUNES, VILLA, GOBERNADOR, GALVEZ, ROLDAN, GRANADERO, BAIGORRIA, DESAFÍOS, PARTIDOS, FUTBOL 5, FUTBOL 7, FUTBOL 11">
     <!--Titulo de la página-->
     <title>Stadium Rosario | Tu mejor elección</title>
     <!--Enlace Bootstrap-->
@@ -19,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -94,7 +96,7 @@
             <h2 data-aos="fade-left" data-aos-duration="2000" data-aos-delay="100" class="descripcionPag">Todo en un solo lugar</h2>
             <!--Beneficios de la página-->
             <p class="textos">
-                Stadium Rosario llegó para simplificarte las cosas. Mediante nuestra app podrás reservar el complejo deportivo que más se adapte a vos. En este sitio podes buscar la mejor cancha filtrando la información en base a su precio, cercanía, disponibilidad, etc. Entre muchas funciones más, la app te permite desafiar a otros equipos de cualquiera de los deportes grupales que puedas imaginar (futbol, basquet, paintball, etc) o simplemente a a otros jugadores de forma individual (tenis, paddle, etc).<br>
+                Stadium Rosario llegó para simplificarte las cosas. Mediante nuestra app podrás reservar el complejo deportivo que más se adapte a vos. En este sitio podes buscar la mejor cancha filtrando la información en base a su precio, cercanía, disponibilidad, etc. Entre muchas funciones más, la app te permite desafiar a otros equipos de cualquiera de los deportes grupales que puedas imaginar (futbol, basquet, paintball, etc) o simplemente a otros jugadores de forma individual (tenis, paddle, etc).<br>
 
                 Contamos con más de 50 complejos asociados en las principales ciudades del Gran Rosario. Cada complejo ofrece distintas disciplinas para practicar y muchos servicios extras que los destacan sobre el resto.
             </p>
@@ -116,11 +118,11 @@
 
             <!--Sección Reservas-->
             <div class="col-lg-6 col-md-4 border border-3" id="reservas">    
-                <!--Subtitulo de la sección-->
-                <h2 data-aos="fade-left"  data-aos-duration="2000" data-aos-delay="100">Reservas</h2>
                 <!--Formulario de reservas, con el tipo de deporte a realizar, el día y la hora.-->
                 <form class="mb-3" id="miForm">
-                    <fieldset> 
+                    <fieldset>
+                        <!--Subtitulo de la sección-->
+                        <h2 data-aos="fade-left"  data-aos-duration="2000" data-aos-delay="100">Reservas</h2>
                         <!--Elegir deporte-->
                         <div class="row">
                             <div class="col-lg-5">
@@ -150,7 +152,7 @@
                                     <option value="Granadero Baigorria">Granadero Baigorria</option>
                                     <option value="Funes">Funes</option>
                                     <option value="Roldan">Roldan</option>
-                                    <option value="V.G. Galvez">V.G. Galvez</option>
+                                    <option value="Villa Gdor. Gálvez">V.G. Galvez</option>
                                 </select>
                             </div>                            
                         </div>
@@ -172,13 +174,18 @@
                                 <input type="time" name="hora" step="3600" id="miInputHora"/>
                             </div>
                         </div>
-                        <button class="btn btn-primary" value="Enviar" id="btn-enviar">Agregar reserva</button>
+                        <button class="btn btn-primary" type="input" value="Enviar" id="btn-enviar">Agregar reserva</button>
                         <button class="btn btn-primary" type="reset" value="Borrar Campos" id="btn-borrar">Borrar campos</button>
-                        
                     </fieldset>
                 </form>
-                <ul id="miListaUl"></ul>
+                <div id="divListaReservas">
+                    <ul id="miListaUl"></ul>
+                </div>
 
+                <!-- Campo de reserva hecha -->
+                <div id="divReservasHechas">
+                    <div id="divTitulo"></div>
+                </div>
             </div>
             <!--FIN DE FORMULARIO BOOTSTRAP-->
         </section>
@@ -199,8 +206,9 @@
         </span>
     </footer>
     <!--Enlace de animaciones JS y BOOTSTRAP-->
-    <script src="js/proyecto2.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/proyectoFinal.js"></script>
     <script>
         AOS.init();
     </script>

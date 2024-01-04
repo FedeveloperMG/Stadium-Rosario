@@ -7,7 +7,7 @@
 .headerIndex :hover.encabezado__logo {
   transform: scale(1.1, 1.1);
 }
-.headerIndex .encabezado__logo {
+.headerIndex .encabezado__logo{
   animation-name: giro;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -162,6 +162,54 @@ body {
 #mapaForm #reservas {
   padding: 10px;
 }
+#divListaReservas{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: reservasYclima;
+}
+
+#divListaReservas #imgClima{
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+    "a"
+    "b";
+  align-items:center;
+  justify-items: center;
+}
+
+#divReservasHechas{
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+    "titulo"
+    "reservasYclima"
+    "boton";
+  padding-bottom: 10px;
+}
+
+li{
+  list-style-type:none
+}
+
+#btn-nuevaReserva{
+
+  grid-area: boton;
+}
+
+#divTitulo{
+  grid-area: titulo;
+}
+
+#tipoClima{
+  grid-area: a;
+}
+#imagen{
+  grid-area: b;
+  max-width: 80px;
+}
+
 #mapaForm .hora {
   padding-bottom: 10px;
 }
@@ -175,13 +223,11 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-
 .seccionReservas {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .mainQuienesSomos {
   background-color: chocolate;
 }
